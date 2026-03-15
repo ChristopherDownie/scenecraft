@@ -1,0 +1,117 @@
+.board-view {
+  flex: 1;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: var(--space-lg);
+  gap: var(--space-md);
+  background: var(--bg-primary);
+  animation: fadeIn var(--transition-base) ease-out;
+}
+
+/* Column */
+.board-column {
+  flex-shrink: 0;
+  width: 280px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-primary);
+  overflow: hidden;
+  animation: slideInUp var(--transition-base) ease-out;
+}
+
+.board-column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-md);
+  border-bottom: 1px solid var(--border-primary);
+  flex-shrink: 0;
+}
+
+.board-column-title-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.board-column-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.board-column-title {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.board-column-count {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  background: var(--bg-tertiary);
+  padding: 1px 8px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+}
+
+.board-column-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  min-height: 80px;
+}
+
+.board-column-body.drag-over {
+  background: rgba(59, 130, 246, 0.05);
+  border: 2px dashed var(--accent-blue);
+  border-radius: var(--radius-md);
+  margin: var(--space-xs);
+}
+
+.board-column-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl) var(--space-md);
+  color: var(--text-muted);
+  font-size: var(--font-xs);
+  text-align: center;
+  border: 1px dashed var(--border-primary);
+  border-radius: var(--radius-md);
+  margin: var(--space-xs);
+}
+
+.board-column-footer {
+  padding: var(--space-sm);
+  border-top: 1px solid var(--border-primary);
+  flex-shrink: 0;
+}
+
+.board-add-card-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: var(--space-sm);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-family);
+  font-size: var(--font-sm);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+.board-add-card-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
